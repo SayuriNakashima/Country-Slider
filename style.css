@@ -1,0 +1,246 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /*tamanho permanece o mesmo, o padding/borda entra dentro do valor definido*/
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #000;
+  color: #eee;
+  font-size: 12px;
+}
+
+header {
+  width: 80%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+  margin: auto;
+  font-size: 16px;
+}
+
+header a {
+  color: #eee;
+  margin-right: 40px;
+  text-decoration: none;
+  display: inline-block;
+  transition: 0.2s;
+  margin-top: 20px; 
+}
+
+header a:hover {
+  color: rgb(255, 255, 255);
+  transform: scale(1.05);
+}
+
+.container {
+  height: 100vh; /* vai cobrir toda a tela, toda a largura e toda altura.*/
+  width: 100vw;
+  margin-top: -50px;
+  overflow: hidden;
+}
+
+.container .list .list-item {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.container .list .list-item img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  filter: brightness(50%);
+}
+
+.container .list .list-item .content {
+  position: absolute;
+  top: 20%;
+  right: 10%;
+  padding-right: 30%;
+  width: 80%;
+  color: #eee;
+  text-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.container .list .list-item .title {
+  font-size: 5em;
+  font-weight: 700;
+  line-height: 1.3em;
+}
+
+.container .list .list-item .description {
+  font-size: 1.5em;
+}
+
+.container .list .list-item .buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 130px); /* 2 colunas de 130px.*/
+  grid-template-rows: 50px;
+  margin-top: 20px; /*de espaço em cima (margem superior*/
+  gap: 5px;
+}
+
+.container .list .list-item .buttons button {
+  border: none;
+  background-color: #eee;
+  letter-spacing: 3px;
+  font-weight: 500;
+  cursor: pointer;
+  text-transform: uppercase; /*tds maiusculos*/
+}
+
+.container .list .list-item .buttons button:hover {
+  background-color: transparent;
+  border: 1px solid #eee;
+  color: #eee;
+  transition: 0.7s;
+}
+
+.container .list .list-item .buttons button:nth-child(2) {
+  /*selecionar o segundo filho*/
+  background-color: transparent;
+  border: 1px solid #eee;
+  color: #eee;
+}
+
+.container .list .list-item .buttons button:nth-child(2):hover {
+  background-color: #eee;
+  color: #000;
+}
+
+.container .thumb {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  display: flex;
+  gap: 20px;
+}
+
+.container .thumb .thumb-item {
+  width: 135px;
+  height: 200px;
+  position: relative;
+}
+
+.container .thumb .thumb-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  filter: brightness(80%);
+}
+
+.container .thumb .content {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
+
+.container .arrows {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: absolute;
+  bottom: 120px;
+  left: 120px;
+  width: 300px;
+}
+
+.container .arrows button {
+  border-radius: 10px;
+  border: none;
+  padding: 12px 17px; /*cima e baixo,laterais*/
+  background-color: #eee4;
+  color: #eee;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 1.5em; /*vezes o tamanho da fonte do elemento onde foi aplicado*/
+}
+
+.container .arrows button:hover {
+  background-color: #eee;
+  color: #000;
+  transition: 0.7s;
+}
+
+/*thumb mov*/
+
+.container.next .thumb {
+  animation: effectNextThumb 0.5s linear 1 forwards;
+}
+
+@keyframes effectNextThumb {
+  from {
+    transform: translateX(150px);
+  }
+  to {
+    transform: translateX(0); /* Retorna para a posição inicial */
+  }
+}
+
+/*mov ultima thumb*/
+
+/* Efeito para a última miniatura */
+.container.next .thumb .thumb-item:nth-last-child(1) {
+  animation: effectLastThumb 0.5s linear 1 forwards;
+}
+
+@keyframes effectLastThumb {
+  from {
+    width: 0;
+    opacity: 0;
+  }
+  to {
+    width: 135px; /* Ajusta a largura da miniatura */
+    opacity: 1; /* Garante que a miniatura esteja visível */
+  }
+}
+
+/* Animação para o conteúdo da última lista */
+.container .list .list-item:nth-last-child(1) .content .title,
+.container .list .list-item:nth-last-child(1) .content .description,
+.container .list .list-item:nth-last-child(1) .content .buttons {
+  transform: translateY(50px);
+  filter: blur(20px);
+  opacity: 0;
+  animation: showContent 0.5s 1s linear forwards;
+}
+
+@keyframes showContent {
+  to {
+    transform: translateY(0);
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+
+/* Atraso da animação para cada elemento do conteúdo */
+.container .list .list-item:nth-last-child(1) .content .title {
+  animation-delay: 1.2s;
+}
+
+.container .list .list-item:nth-last-child(1) .content .description {
+  animation-delay: 1.6s;
+}
+
+.container .list .list-item:nth-last-child(1) .content .buttons {
+  animation-delay: 2s;
+}
+
+.container .list .list-item img {
+  animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
