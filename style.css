@@ -29,7 +29,7 @@ header a {
   text-decoration: none;
   display: inline-block;
   transition: 0.2s;
-  margin-top: 20px; 
+  margin-top: 20px;
 }
 
 header a:hover {
@@ -244,3 +244,48 @@ header a:hover {
     opacity: 1;
   }
 }
+
+@media (max-width: 768px) {
+  header {
+    width: 90%;
+    font-size: 14px;
+  }
+
+  .container .list .list-item .content {
+    top: 10%;
+    right: 5%;
+    padding-right: 5%;
+    width: 90%;
+  }
+
+  .container .list .list-item .title {
+    font-size: 2.5em;
+  }
+
+  .container .list .list-item .description {
+    font-size: 1em;
+  }
+
+  .container .thumb {
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .container .thumb .thumb-item {
+    width: 100px;
+    height: 150px;
+  }
+
+  .container .arrows {
+    bottom: 200px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+    justify-content: center;
+  }
+}
+
