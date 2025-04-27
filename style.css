@@ -245,7 +245,7 @@ header a:hover {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1232px) {
   header {
     width: 90%;
     font-size: 14px;
