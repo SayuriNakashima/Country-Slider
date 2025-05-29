@@ -14,8 +14,8 @@ O Country Slider é uma ferramenta interativa que permite ao usuário explorar q
 
 ## 🛠️ Tecnologias Utilizadas
 
-- *HTML5* – Estruturação da página
-- *CSS3* – Estilização e responsividade
-- *JavaScript* – Manipulação do DOM e lógica de navegação
+- **HTML5** – Estruturação da página
+- **CSS3** – Estilização e responsividade
+- **JavaScript** – Manipulação do DOM e lógica de navegação
 
 
