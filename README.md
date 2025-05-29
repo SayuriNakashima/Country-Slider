@@ -4,7 +4,7 @@ O *Country Slider* é um *slider de países* onde, ao clicar nas setas de navega
 
 ## 📸 Demonstração
 
-![Demonstração do Country Slider](https://github.com/seu-usuario/country-slider/raw/main/imagens/demo.gif)
+![Demonstração do Country Slider](https://github.com/SayuriNkashima/country-slider/raw/main/imagens/demo.gif)
 
 ## ✨ Funcionalidades
 
@@ -19,9 +19,4 @@ O *Country Slider* é um *slider de países* onde, ao clicar nas setas de navega
 - *CSS3* – Estilização e responsividade
 - *JavaScript* – Manipulação do DOM e lógica de navegação
 
-## 🚀 Como Usar
 
-1. Clone o repositório:
-
-   ```bash
-   git clone https://github.com/seu-usuario/country-slider.git
