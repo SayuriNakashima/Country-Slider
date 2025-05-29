@@ -4,15 +4,13 @@ O Country Slider é uma ferramenta interativa que permite ao usuário explorar q
 
 ## 📸 Demonstração
 
-
 ![Demonstração do Country Slider](demonstracao.png)
 
 ## ✨ Funcionalidades
 
 - Transições suaves entre países com setas de navegação
 - Informações culturais de cada país exibidas dinamicamente
-- Design responsivo para todos os tamanhos de tela
-- Fácil adição de novos países
+- Design não responsivo 
 
 ## 🛠️ Tecnologias Utilizadas
 
