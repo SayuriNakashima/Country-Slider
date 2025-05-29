@@ -1,6 +1,6 @@
 # 🌍 Country Slider
 
-O *Country Slider* é um *slider de países* onde, ao clicar nas setas de navegação, o usuário descobre *culturas, curiosidades e costumes* de diferentes países do mundo.
+O Country Slider é uma ferramenta interativa que permite ao usuário explorar quatro países específicos, onde, ao clicar nas setas de navegação, ele descobre culturas, curiosidades e costumes exclusivos de cada um desses países.
 
 ## 📸 Demonstração
 
