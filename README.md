@@ -5,7 +5,7 @@ O *Country Slider* é um *slider de países* onde, ao clicar nas setas de navega
 ## 📸 Demonstração
 
 
-![Texto alternativo](https://files.fm/u/xsqhm5xwn9)
+![Demonstração do Country Slider](demonstracao.png)
 
 ## ✨ Funcionalidades
 
